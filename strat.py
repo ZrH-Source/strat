@@ -20,7 +20,7 @@ timeframe = "1h"
 account_to_select = "binance_exemple"
 
 params_coin = {
-    "BTCUSDT": {
+    "VETUSDT": {
         "wallet_exposure": 0.2,
         "st_short_atr_window": 11,
         "st_short_atr_multiplier": 6.5,
