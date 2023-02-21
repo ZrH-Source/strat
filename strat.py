@@ -97,7 +97,8 @@ for symbol in symbol_balance:
             buy_quantity = binance.convert_amount_to_precision(pair, (buy_quantity_in_usd / buy_limit_price))
             print(f"Buy limit on {pair} of {buy_quantity} at the price of {buy_limit_price}$")
             try:
-                binance.place_limit_order(pair, "Buy", buy_quantity, buy_limit_price)
+                #binance.place_limit_order(pair, "Buy", buy_quantity, buy_limit_price)
+                print("buy")
             except Exception as e:
                 print(f"    Error: {e}")
     elif symbol_balance[symbol] > 0:
@@ -106,7 +107,8 @@ for symbol in symbol_balance:
             sell_quantity = binance.convert_amount_to_precision(pair, symbol_balance[symbol])
             print(f"Sell limit on {pair} of {sell_quantity} at the price of {sell_limit_price}$")
             try:
-                binance.place_limit_order(pair, "Sell", sell_quantity, sell_limit_price)
+                #binance.place_limit_order(pair, "Sell", sell_quantity, sell_limit_price)
+                print("sell")
             except Exception as e:
                 print(f"    Error: {e}")
 
